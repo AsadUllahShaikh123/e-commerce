@@ -1,8 +1,17 @@
 import React from 'react'
+import { CartState } from '../context/Context'
 
 const Home = () => {
+
+  let {state:{products}}= CartState();
+
   return (
-    <h1>Hello From Home</h1>
+    <div className='home'>
+      {/* <Filters/> */}
+      <div className='productContainer'>
+          {products.map(value=> <span key={value.name}>{value.name}<br/></span> )}
+      </div>
+    </div> 
   )
 }
 
