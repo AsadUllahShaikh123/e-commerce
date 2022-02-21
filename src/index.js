@@ -1,15 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Context from "./assets/context/Context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App/>
+    <Context>
+      <App />
+    </Context>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
-if(module.hot){
+if (module.hot) {
   module.hot.accept();
 }
