@@ -1,15 +1,17 @@
 import React from 'react'
 import { CartState } from '../context/Context'
-
+import Filters from './Filters';
+import SingleProduct from './SingleProduct';
+import './style.css'
 const Home = () => {
 
   let {state:{products}}= CartState();
 
   return (
     <div className='home'>
-      {/* <Filters/> */}
+      <Filters/>
       <div className='productContainer'>
-          {products.map(value=> <span key={value.name}>{value.name}<br/></span> )}
+          {products.map(product=> <SingleProduct product={product} key={product.name}/>)}
       </div>
     </div> 
   )
