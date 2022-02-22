@@ -32,3 +32,25 @@
   width:31%;
   margin:10px;
 }
+
+.cartItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  margin-bottom: 20px;
+}
+
+.cartItemImage{
+  border-radius: 50%;
+  width:50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.cartItemDetail{
+  display: flex;
+  flex: 1;
+  padding: 0 20px ;
+  flex-direction: column;
+}
