@@ -8,7 +8,6 @@ import {
   Navbar,
 } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
-
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CartState } from "../context/Context";
@@ -17,6 +16,7 @@ const Header = () => {
   let {
     state: { cart },
     dispatch,
+    productDispatch,
   } = CartState();
 
   return (
@@ -32,6 +32,12 @@ const Header = () => {
               className="m-auto"
               style={{ width: 500 }}
               placeholder="Search a product"
+              onChange={(e) =>
+                productDispatch({
+                  type: "FITLER_BY_SEARCH",
+                  payload: e.target.value,
+                })
+              }
             />
           </Navbar.Text>
 
